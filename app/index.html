@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sounds</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body ng-app="sound-panel">
+<div class="full-height centered-items has-background-light">
+    <div class="container" ng-controller="soundsController">
+        <div class="columns is-multiline is-vcentered">
+            <div ng-repeat="sound in sounds" class="column">
+                <div class="card">
+                    <div class="card-content has-text-centered">
+                        <p class="title">{{ sound.title }}</p>
+                        <p class="subtitle">{{ sound.author }}</p>
+                    </div>
+                    <footer class="card-footer">
+                        <p class="card-footer-item">
+                            <audio controls="controls">
+                                <source src="./media/audio/{{ sound.audioPath }}" type="audio/ogg"/>
+                                <source src="./media/audio/{{ sound.audioPath }}" type="audio/mpeg"/>
+                                Your browser does not support the audio element.
+                            </audio>
+                        </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

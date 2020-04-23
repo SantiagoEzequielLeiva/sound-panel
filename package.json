@@ -1,0 +1,19 @@
+{
+  "name": "sound-panel",
+  "version": "1.0.0",
+  "description": "Sounds panel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantiagoEzequielLeiva/sound-panel.git"
+  },
+  "author": "Santiago Ezequiel Leiva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SantiagoEzequielLeiva/sound-panel/issues"
+  },
+  "homepage": "https://github.com/SantiagoEzequielLeiva/sound-panel#readme"
+}

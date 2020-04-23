@@ -1,6 +1,10 @@
-function defaultTask(cb) {
-    console.log("Default task test");
-    cb();
+const {series, src, dest} = require('gulp');
+const htmlmin = require('gulp-htmlmin');
+
+function minifyHTML() {
+    return src('app/*.html')
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(dest('dist'));
 }
 
-exports.default = defaultTask;
+exports.default = series(minifyHTML);
